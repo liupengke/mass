@@ -8,6 +8,7 @@ createServer((page) =>
 		page,
 		render: renderToString,
 		resolve: (name) => {
+			console.log('name: ', name);
 			const pages = import.meta.glob('./Pages/**/*.vue', { eager: true });
 			return pages[`./Pages/${name}.vue`];
 		},
