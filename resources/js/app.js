@@ -1,14 +1,12 @@
 import { createSSRApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/vue3';
+import { createMassApp } from '../../bak/src/lib';
 
-createInertiaApp({
+createMassApp({
 	resolve: (name) => {
 		const pages = import.meta.glob('./Pages/**/*.vue', { eager: true });
 		return pages[`./Pages/${name}.vue`];
 	},
-	setup({ el, App, props, plugin }) {
-		return createSSRApp({ render: () => h(App, props) })
-			.use(plugin)
-			.mount(el);
+	setup({ el, App, props }) {
+		return createSSRApp({ render: () => h(App, props) }).mount(el);
 	}
 });
