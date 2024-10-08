@@ -21,5 +21,14 @@ Route::get('/', function () {
 		'canRegister' => Route::has('register'),
 		'laravelVersion' => Application::VERSION,
 		'phpVersion' => PHP_VERSION,
-]);
+	]);
+});
+
+Route::any('/goods/{pid}', function($pid){
+	return Inertia::render('Goods', [
+		'pid' => $pid,
+		'pname' => 'Aquabeads EPOCH Character Bead Sets, AQ-S87, ST Mark Certified, For Ages 450 and Up, Toy, Water Sticks, Making Toy, Made by Epoch',
+		'img' => 'https://m.media-amazon.com/images/I/91cFkQEsUGL._AC_SL1500_.jpg',
+		'price' => '20.86',
+	]);
 });

@@ -1,5 +1,5 @@
-import { createSSRApp, h } from 'vue';
-import { createMassApp } from '../../bak/src/lib';
+import { createApp, h } from 'vue';
+import { createMassApp } from './mass';
 
 createMassApp({
 	resolve: (name) => {
@@ -7,6 +7,6 @@ createMassApp({
 		return pages[`./Pages/${name}.vue`];
 	},
 	setup({ el, App, props }) {
-		return createSSRApp({ render: () => h(App, props) }).mount(el);
+		createApp({ render: () => h(App, props) }).mount(el);
 	}
 });

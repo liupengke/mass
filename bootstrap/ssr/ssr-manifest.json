@@ -1,10 +1,11 @@
 {
   "\u0000plugin-vue:export-helper": [],
+  "resources/js/Pages/Goods.vue": [],
   "resources/js/Pages/Welcome.vue": [],
-  "resources/js/Pages/Welcome.vue?vue&type=style&index=0&lang.css": [],
   "resources/js/mass/App.vue": [],
-  "resources/js/mass/App.vue?vue&type=style&index=0&scoped=69316741&lang.css": [],
+  "resources/js/mass/App.vue?vue&type=style&index=0&scoped=7edb9e76&lang.css": [],
   "resources/js/mass/createMassApp.js": [],
   "resources/js/mass/router.js": [],
+  "resources/js/mass/url.js": [],
   "resources/js/ssr.js": []
 }

@@ -1,5 +1,6 @@
 import { createSSRApp, h } from 'vue';
 import App from './App.vue';
+import './mass.css';
 
 export default async function createMassApp({ id = 'app', resolve, setup, page, render }) {
 	const isServer = typeof window === 'undefined';
@@ -8,7 +9,6 @@ export default async function createMassApp({ id = 'app', resolve, setup, page, 
 	const initialPage = page || JSON.parse(el.dataset.page);
 	const resolveComponent = (name) =>
 		Promise.resolve(resolve(name)).then((module) => module.default || module);
-
 	const vueApp = await resolveComponent(initialPage.component).then(async (initialComponent) => {
 		return setup({
 			el,
